@@ -19,8 +19,26 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	/* Slack Webhook */
+	// Slack Webhook
 	implementation 'com.slack.api:slack-api-client:1.30.0'
+
+	// Jdbc
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+	// H2db
+	implementation 'com.h2database:h2'
+
+	// Jpa
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	// Redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 }
 
 tasks.named('bootBuildImage') {

@@ -1,1 +1,11 @@
-
+spring:
+  config:
+    import:
+      - application-server.yml
+      - application-db.yml
+      - application-jpa.yml
+      - application-redis.yml
+#      - application-etc.yml
+#      - application-security.yml
+#      - application-common.yml
+#      - application-sms.yml
