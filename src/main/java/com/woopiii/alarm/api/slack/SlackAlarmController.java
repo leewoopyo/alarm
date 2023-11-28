@@ -1,4 +1,4 @@
-package com.woopiii.alarm.api.alarm;
+package com.woopiii.alarm.api.slack;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,19 +9,21 @@ import com.slack.api.Slack;
 import com.slack.api.webhook.WebhookResponse;
 
 @RestController
-@RequestMapping(value = "/alarm")
-public class AlarmController {
+@RequestMapping(value = "/alarm/slack")
+public class SlackAlarmController {
     
     //GetMethod
     @GetMapping
     public String getAlarm () {
 
-        String sampleUrl = "https://hooks.slack.com/services/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";
+        String sampleUrl = "https://hooks.slack.com/services/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";
 
         Slack slack = Slack.getInstance();
 
         String payload = """
             {
+                "username" : "woopiii-system",
+                "icon_emoji": ":ghost:",
                 "text" : "메시지 테스트"
             }        
         """;
